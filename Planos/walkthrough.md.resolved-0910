@@ -1,0 +1,40 @@
+# Walkthrough — Reformulação do Processo de Nova Análise
+
+O processo de **Nova Análise** foi totalmente revisado e aprimorado para garantir uma experiência fluida de carregamento/arrasto (drag & drop) de apólices, processamento por IA e abertura automática da tela de detalhes da apólice recém-analisada.
+
+---
+
+## Alterações Realizadas
+
+### 1. Backend (`do-intelligence/backend`)
+
+- **[policies.py](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/backend/app/api/policies.py)**:
+  - Adicionado o endpoint `GET /v1/policies/{policy_id}/evidence` para retornar todas as evidências (campos estruturados e cláusulas) associadas especificamente à apólice selecionada.
+- **[orchestrator.py](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/backend/app/agents/orchestrator.py)**:
+  - Atualizada a persistência do registro da `Policy` durante o processamento para utilizar o nome do ficheiro e extrair metadados representativos (número de apólice `POL-...`, seguradora e tomador baseados no ficheiro enviado).
+
+### 2. Frontend (`do-intelligence/frontend`)
+
+- **[NewAnalysis.tsx](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/frontend/src/pages/NewAnalysis.tsx)**:
+  - Adicionados manipuladores nativos de Drag & Drop (`onDragOver`, `onDragLeave`, `onDrop`) com feedback visual dinâmico (destaque em azul e animação ao arrastar arquivos para a superfície).
+  - Exibição de cartão com detalhes do ficheiro selecionado (tamanho em MB, tipo de arquivo, status de OCR e botão de remoção).
+  - Atualização do botão **"Iniciar Análise com IA"** com stepper visual de 4 etapas (upload -> OCR & extração -> indexação RAG -> redirecionamento).
+  - Navegação automática direta para `/policies/{policy_id}` assim que o backend retorna o ID da apólice criada.
+- **[PolicyDetail.tsx](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/frontend/src/pages/PolicyDetail.tsx)**:
+  - Ajustada a exibição de evidências para carregar sem falhas os trechos de texto extraídos do ficheiro (`ev.text_chunk || ev.evidence || ev.value`), permitindo a inspeção de 7 abas de detalhes da apólice e botões para comparar ou auditar evidências.
+
+---
+
+## Como Validar a Funcionalidade
+
+1. **Acessar a Aplicação Web**:
+   - Navegue para a rota `/new-analysis` (Menu **Nova Análise**).
+2. **Testar Drag & Drop / Seleção de Ficheiros**:
+   - Arraste um arquivo PDF ou imagem (ex: `POL-DO-2025-001.pdf`) para a área de upload e observe o destaque visual.
+   - Verifique que o cartão do ficheiro aparece com seu nome e tamanho correto.
+3. **Iniciar Análise com IA**:
+   - Clique no botão **"Iniciar Análise com IA"**.
+   - Observe a barra de execução passar pelas 4 etapas de inferência.
+4. **Verificar Redirecionamento Automático**:
+   - Ao concluir a etapa 4/4, o sistema redirecionará automaticamente para `/policies/{policy_id}`.
+   - A página de detalhes da apólice exibirá os valores extraídos, coberturas, exclusões, limites e a aba de **Evidências** com os trechos extraídos do documento.

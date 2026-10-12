@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary":"#0051d5","secondary-container":"#316bf3","inverse-surface":"#213145","tertiary-fixed":"#e1e0ff","primary":"#000000","inverse-on-surface":"#eaf1ff","surface-container-low":"#eff4ff","on-tertiary-fixed-variant":"#2f2ebe","on-primary-container":"#7c839b","surface-bright":"#f8f9ff","error":"#ba1a1a","secondary-fixed":"#dbe1ff","on-background":"#0b1c30","secondary-fixed-dim":"#b4c5ff","outline-variant":"#c6c6cd","on-surface-variant":"#45464d","primary-fixed":"#dae2fd","on-surface":"#0b1c30","surface":"#f8f9ff","on-primary":"#ffffff","on-primary-fixed":"#131b2e","on-error":"#ffffff","surface-tint":"#565e74","inverse-primary":"#bec6e0","tertiary":"#000000","primary-container":"#131b2e","on-tertiary-container":"#7073ff","outline":"#76777d","surface-container-lowest":"#ffffff","background":"#f8f9ff","surface-container-high":"#dce9ff","tertiary-container":"#07006c","primary-fixed-dim":"#bec6e0","surface-dim":"#cbdbf5","on-error-container":"#93000a","on-secondary-fixed-variant":"#003ea8","error-container":"#ffdad6","on-primary-fixed-variant":"#3f465c","on-tertiary-fixed":"#07006c","on-tertiary":"#ffffff","on-secondary-container":"#fefcff","on-secondary-fixed":"#00174b","surface-container":"#e5eeff","tertiary-fixed-dim":"#c0c1ff","on-secondary":"#ffffff","surface-container-highest":"#d3e4fe","surface-variant":"#d3e4fe"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-xl":"2rem","gutter-desktop":"1.5rem","space-md":"0.75rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter":"1rem","margin":"1rem","margin-desktop":"2rem","space-lg":"1.25rem"},fontFamily:{"body-sm":["Inter"],"data-mono-lg":["JetBrains Mono"],"headline-md":["Inter"],"headline-lg":["Inter"],"headline-xl":["Inter"],"body-md":["Inter"],"data-mono-sm":["JetBrains Mono"],"data-mono-md":["JetBrains Mono"],"headline-xl-mobile":["Inter"],"body-lg":["Inter"],"label-md":["Inter"]},fontSize:{"body-sm":["0.75rem",{"lineHeight":"1.125rem","fontWeight":"400"}],"data-mono-lg":["1rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-md":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-xl":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.025em","fontWeight":"700"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","fontWeight":"400"}],"data-mono-sm":["0.6875rem",{"lineHeight":"1rem","fontWeight":"500"}],"data-mono-md":["0.8125rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"headline-xl-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm"><img alt="D&amp;O Intelligence Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1ViNenoz4uomnClZqWwGSaGBJPY6u43-1mZ_Yxwc-szaGOR-YDLLmH2YYeyWaO5buoZlSxGV_C6FRp0IHVuwtMrUxu1-LoxSsK40F9ScoITvFQ8HWIwEzn0hM2O1ZgTXbaXYbDHKDf6CcpLP1c05J0Sybhx68qXkTXfW3RI5urXFrAvFKPftDmPBoKgfPp7Lws98oaYmunqvcqkcyvz8Hl5hZqdmZ0z-ldEzQGFioi8_4kxGPYVUAv65Ok"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-on-surface tracking-tight leading-tight">D&amp;O Intel</span><span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant uppercase">Policy Analysis</span></div></div><nav class="flex flex-col gap-space-xs px-space-sm mt-space-md" data-active-classes="bg-surface-container-high text-secondary font-semibold"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="apolices" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span class="font-body-md text-body-md">Apólices</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="nova-analise" href="#"><span class="material-symbols-outlined text-[20px]">upload_file</span><span class="font-body-md text-body-md">Nova Análise</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="comparacoes" href="#"><span class="material-symbols-outlined text-[20px]">balance</span><span class="font-body-md text-body-md">Comparações</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="relatorios" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-body-md text-body-md">Relatórios</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="historico" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span class="font-body-md text-body-md">Histórico</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="configuracoes" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Configurações</span></a></nav></div><div class="p-space-sm bg-surface-container-low m-space-sm rounded-lg flex flex-col gap-space-xs"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs overflow-hidden"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col truncate"><span class="font-label-md text-label-md text-on-surface truncate">Carlos Mendes</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Underwriter Sênior</span></div></div><a class="p-space-xs text-on-surface-variant hover:text-error hover:bg-surface-container-high rounded transition-colors shrink-0" data-path="login" href="#" title="Logout"><span class="material-symbols-outlined text-[20px]">logout</span></a></div><div class="pt-space-xs"><span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant block truncate">Alpha Re &amp; Seguros</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 px-gutter flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><span class="hover:text-on-surface">Alpha Re</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span class="text-on-surface font-semibold">D&amp;O Underwriting</span></div><div class="h-4 w-[1px] bg-surface-container-high"></div><div class="flex items-center gap-space-xs px-space-xs py-0.5 rounded-full bg-surface-container"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-data-mono-sm text-data-mono-sm text-secondary uppercase font-semibold">IA Online</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center w-72"><span class="material-symbols-outlined absolute left-space-sm text-[18px] text-on-surface-variant pointer-events-none">search</span><input class="w-full pl-8 pr-12 py-1.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary transition-all" placeholder="Buscar apólices, cláusulas..." type="text"/><kbd class="absolute right-space-sm font-data-mono-sm text-data-mono-sm text-on-surface-variant bg-surface-container-high px-1 rounded">⌘K</kbd></div><div class="flex items-center gap-space-xs"><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded transition-colors" title="Notificações" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-secondary text-on-secondary font-data-mono-sm text-[10px] flex items-center justify-center font-bold">3</span></button><button class="p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded transition-colors" title="Ajuda &amp; Documentação" type="button"><span class="material-symbols-outlined text-[22px]">help</span></button></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-gutter"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Meta & Title Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col">
+<!-- Breadcrumb -->
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm mb-space-xs">
+<a class="hover:text-on-surface transition-colors" href="#">Dashboard</a>
+<span class="material-symbols-outlined text-[13px] text-outline-variant">chevron_right</span>
+<span class="text-on-surface font-semibold">Histórico de Análises</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Histórico de Análises e Comparações
+        </h1>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-data-mono-sm text-data-mono-sm px-space-xs py-0.5 rounded-lg flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          SUSEP v4.2 Compliance
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+        Arquivo auditado de todas as execuções de inteligência artificial, conferências de apólices e benchmarks contratuais.
+      </p>
+</div>
+<!-- Quick Analytics Snapshot Badges -->
+<div class="flex items-center gap-space-sm bg-surface-container-low p-space-xs rounded-xl self-start md:self-auto">
+<div class="px-space-sm py-space-xs bg-surface-container-lowest rounded-lg shadow-sm flex flex-col">
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant uppercase">Total Arquivadas</span>
+<span class="font-headline-md text-headline-md text-on-surface">65</span>
+</div>
+<div class="px-space-sm py-space-xs bg-surface-container-lowest rounded-lg shadow-sm flex flex-col">
+<span class="font-data-mono-sm text-data-mono-sm text-secondary uppercase font-semibold">Acurácia IA Média</span>
+<span class="font-headline-md text-headline-md text-secondary">96.8%</span>
+</div>
+<div class="px-space-sm py-space-xs bg-surface-container-lowest rounded-lg shadow-sm flex flex-col">
+<span class="font-data-mono-sm text-data-mono-sm text-error uppercase font-semibold">Erros / Exceções</span>
+<span class="font-headline-md text-headline-md text-error">1</span>
+</div>
+</div>
+</div>
+<!-- Filter and Search Toolbar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md flex flex-col gap-space-md">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center">
+<!-- Search Bar -->
+<div class="md:col-span-4 relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-sm text-[20px] text-on-surface-variant pointer-events-none">search</span>
+<input class="w-full pl-9 pr-space-md py-space-xs bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary transition-all" id="history-search" placeholder="Filtrar por nome de seguradora, tomador, apólice ou protocolo..." type="text"/>
+</div>
+<!-- Filters Group -->
+<div class="md:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-space-xs">
+<!-- Tipo de Análise -->
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-body-sm text-body-sm py-space-xs pl-space-sm pr-7 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary cursor-pointer">
+<option value="">Tipo: Todas</option>
+<option value="individual">Análise Individual</option>
+<option value="comparacao">Comparação 1x1</option>
+<option value="benchmark">Benchmark Carteira</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-[18px] text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+<!-- Seguradora -->
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-body-sm text-body-sm py-space-xs pl-space-sm pr-7 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary cursor-pointer">
+<option value="">Seguradora: Todas</option>
+<option value="abc">ABC Insurance</option>
+<option value="xyz">XYZ Seguros</option>
+<option value="chubb">Chubb Seguros</option>
+<option value="tokio">Tokio Marine</option>
+<option value="allianz">Allianz Global</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-[18px] text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+<!-- Estado da IA -->
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-body-sm text-body-sm py-space-xs pl-space-sm pr-7 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary cursor-pointer">
+<option value="">Estado: Todos</option>
+<option value="auditada">Processada / Auditada</option>
+<option value="alertas">Com Alertas</option>
+<option value="erro">Pendente / Erro OCR</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-[18px] text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+<!-- Período -->
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-body-sm text-body-sm py-space-xs pl-space-sm pr-7 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary cursor-pointer">
+<option value="90">Últimos 90 dias</option>
+<option value="30">Últimos 30 dias</option>
+<option value="180">Últimos 6 meses</option>
+<option value="365">Ano de 2026</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-[18px] text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Active Filters & Actions Row -->
+<div class="flex items-center justify-between pt-space-xs border-t border-surface-container-high/40 text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant">Filtros Ativos:</span>
+<span class="inline-flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-lg text-on-surface font-body-sm">
+          Período: 90 dias
+          <button class="hover:text-error flex items-center"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<button class="text-secondary font-label-md text-label-md hover:underline ml-space-xs flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[15px]">restart_alt</span> Limpar Filtros
+        </button>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg shadow-sm transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+          Exportar Histórico (CSV)
+        </button>
+<button class="p-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface rounded-lg transition-colors" title="Atualizar dados" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Master High-Density Corporate Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col mb-space-md">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[1040px]">
+<thead>
+<tr class="bg-surface-container-low/80 text-on-surface-variant font-label-md text-label-md uppercase tracking-wider h-10">
+<th class="py-space-xs px-space-md w-[140px]">Data / Timestamp</th>
+<th class="py-space-xs px-space-md">Apólice / Comparação</th>
+<th class="py-space-xs px-space-md">Seguradora(s)</th>
+<th class="py-space-xs px-space-md w-[140px]">Tipo de Análise</th>
+<th class="py-space-xs px-space-md w-[160px]">Estado da IA</th>
+<th class="py-space-xs px-space-md text-right w-[150px]">Score / Confiabilidade</th>
+<th class="py-space-xs px-space-md text-center w-[170px]">Ações</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/30 font-body-md text-body-md">
+<!-- Row 1: Comparison -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-semibold">14/03/2026</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">16:40:12 UTC</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">balance</span>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-[14px] text-on-surface font-semibold truncate group-hover:text-secondary transition-colors">
+                    ABC vs XYZ Insurance
+                  </span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant truncate">
+                    DO-2026-00124 vs DO-2026-00892
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-on-surface font-medium">ABC Insurance / XYZ Seguros</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Brasil &amp; América Latina</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 font-data-mono-sm text-data-mono-sm px-2 py-0.5 rounded-lg bg-surface-container text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[13px]">compare_arrows</span>
+                Comparação 1x1
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#ecfdf5] text-[#065f46] font-data-mono-sm text-data-mono-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-[#10b981]"></span>
+                Auditada (IA 97%)
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold tracking-tight">86 vs 78 pts</span>
+<span class="font-data-mono-sm text-data-mono-sm text-secondary font-medium">+8 pts Delta</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded transition-colors" title="Ver Comparação">
+<span class="material-symbols-outlined text-[19px]">visibility</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Abrir Relatório">
+<span class="material-symbols-outlined text-[19px]">description</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Evidência Criptográfica">
+<span class="material-symbols-outlined text-[19px]">verified_user</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Single Policy Processed -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-semibold">14/03/2026</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">10:17:05 UTC</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant mt-0.5">article</span>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-[14px] text-on-surface font-semibold truncate group-hover:text-secondary transition-colors">
+                    Apolice_DO_ABC_2026.pdf
+                  </span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant truncate">
+                    Protocolo: DO-2026-00124 • 144 Cláusulas
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-on-surface font-medium">ABC Insurance Brasil S.A.</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">CNPJ: 02.493.118/0001-09</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 font-data-mono-sm text-data-mono-sm px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[13px]">document_scanner</span>
+                Análise Individual
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#ecfdf5] text-[#065f46] font-data-mono-sm text-data-mono-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-[#10b981]"></span>
+                Processada
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold">82<span class="text-on-surface-variant font-normal">/100</span></span>
+<span class="font-data-mono-sm text-data-mono-sm text-[#065f46]">Grau A+ (Sólido)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded transition-colors" title="Visualizar Apólice">
+<span class="material-symbols-outlined text-[19px]">visibility</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded transition-colors" title="Comparar com outra">
+<span class="material-symbols-outlined text-[19px]">balance</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Abrir Relatório">
+<span class="material-symbols-outlined text-[19px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Single Policy with 1 Alert -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-semibold">14/03/2026</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">09:12:44 UTC</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant mt-0.5">article</span>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-[14px] text-on-surface font-semibold truncate group-hover:text-secondary transition-colors">
+                    XYZ_DO_Corporate_2026.pdf
+                  </span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant truncate">
+                    Protocolo: DO-2026-00892 • 98 Cláusulas
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-on-surface font-medium">XYZ Insurance Brasil</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">CNPJ: 08.112.980/0001-44</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 font-data-mono-sm text-data-mono-sm px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[13px]">document_scanner</span>
+                Análise Individual
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#fffbeb] text-[#92400e] font-data-mono-sm text-data-mono-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-[#f59e0b]"></span>
+                Com 1 Alerta
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold">78<span class="text-on-surface-variant font-normal">/100</span></span>
+<span class="font-data-mono-sm text-data-mono-sm text-[#92400e]">Exclusão Poluição</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded transition-colors" title="Visualizar Apólice">
+<span class="material-symbols-outlined text-[19px]">visibility</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded transition-colors" title="Comparar com outra">
+<span class="material-symbols-outlined text-[19px]">balance</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Abrir Relatório">
+<span class="material-symbols-outlined text-[19px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Multiple Alerts -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-semibold">13/03/2026</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">14:20:30 UTC</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant mt-0.5">article</span>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-[14px] text-on-surface font-semibold truncate group-hover:text-secondary transition-colors">
+                    Chubb_DO_TechVentures_2025.pdf
+                  </span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant truncate">
+                    Protocolo: CB-55021-TX • 112 Cláusulas
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-on-surface font-medium">Chubb Seguros</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Operação Brasil</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 font-data-mono-sm text-data-mono-sm px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[13px]">document_scanner</span>
+                Análise Individual
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#fffbeb] text-[#92400e] font-data-mono-sm text-data-mono-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-[#f59e0b]"></span>
+                Com Alertas (3)
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold">68<span class="text-on-surface-variant font-normal">/100</span></span>
+<span class="font-data-mono-sm text-data-mono-sm text-error">Side C Restrita</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded transition-colors" title="Visualizar Apólice">
+<span class="material-symbols-outlined text-[19px]">visibility</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded transition-colors" title="Comparar com outra">
+<span class="material-symbols-outlined text-[19px]">balance</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Abrir Relatório">
+<span class="material-symbols-outlined text-[19px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Single High Score -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-semibold">12/03/2026</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">11:05:19 UTC</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant mt-0.5">article</span>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-[14px] text-on-surface font-semibold truncate group-hover:text-secondary transition-colors">
+                    Tokio_DO_Master_2026.pdf
+                  </span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant truncate">
+                    Protocolo: TM-9910-CORP • 160 Cláusulas
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-on-surface font-medium">Tokio Marine</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Grandes Riscos</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 font-data-mono-sm text-data-mono-sm px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[13px]">document_scanner</span>
+                Análise Individual
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#ecfdf5] text-[#065f46] font-data-mono-sm text-data-mono-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-[#10b981]"></span>
+                Processada
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold text-secondary">91<span class="text-on-surface-variant font-normal">/100</span></span>
+<span class="font-data-mono-sm text-data-mono-sm text-[#065f46]">Benchmark Master</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded transition-colors" title="Visualizar Apólice">
+<span class="material-symbols-outlined text-[19px]">visibility</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded transition-colors" title="Comparar com outra">
+<span class="material-symbols-outlined text-[19px]">balance</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Abrir Relatório">
+<span class="material-symbols-outlined text-[19px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Benchmark Comparison -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-semibold">10/03/2026</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">15:40:02 UTC</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">balance</span>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-[14px] text-on-surface font-semibold truncate group-hover:text-secondary transition-colors">
+                    ABC vs Chubb D&amp;O Benchmark
+                  </span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant truncate">
+                    DO-2026-00124 vs CB-55021-TX
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-on-surface font-medium">ABC Insurance / Chubb</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Estudo Competitivo</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 font-data-mono-sm text-data-mono-sm px-2 py-0.5 rounded-lg bg-surface-container text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[13px]">compare_arrows</span>
+                Comparação 1x1
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#ecfdf5] text-[#065f46] font-data-mono-sm text-data-mono-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-[#10b981]"></span>
+                Concluída
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold tracking-tight">82 vs 68 pts</span>
+<span class="font-data-mono-sm text-data-mono-sm text-secondary font-medium">+14 pts ABC Vence</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded transition-colors" title="Ver Comparação">
+<span class="material-symbols-outlined text-[19px]">visibility</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Abrir Relatório">
+<span class="material-symbols-outlined text-[19px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: OCR Error -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group bg-error-container/10">
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-semibold">08/03/2026</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">17:30:11 UTC</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-error mt-0.5">error</span>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-[14px] text-on-surface font-semibold truncate group-hover:text-error transition-colors">
+                    Allianz_Global_Corporate.pdf
+                  </span>
+<span class="font-data-mono-sm text-data-mono-sm text-error truncate">
+                    Falha na camada texto (DPI &lt; 150)
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-on-surface font-medium">Allianz Global</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Underwriting Desk 03</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 font-data-mono-sm text-data-mono-sm px-2 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[13px]">document_scanner</span>
+                Análise Individual
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-data-mono-sm text-data-mono-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                Erro OCR Ilegível
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-data-mono-md text-data-mono-md text-on-surface-variant">--</span>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="flex items-center justify-center gap-space-xs">
+<button class="px-2 py-1 bg-surface-container text-secondary hover:bg-secondary hover:text-on-secondary rounded font-label-md text-label-md transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">replay</span> Reprocessar
+                </button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Ver Detalhes do Erro">
+<span class="material-symbols-outlined text-[18px]">info</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-between px-space-md py-space-sm bg-surface-container-low/40 border-t border-surface-container-high/40 gap-space-sm">
+<div class="flex items-center gap-space-sm text-body-sm text-on-surface-variant">
+<span>Mostrando <strong class="text-on-surface font-semibold">1-7</strong> de <strong class="text-on-surface font-semibold">65</strong> análises arquivadas</span>
+<span class="hidden sm:inline text-outline-variant">•</span>
+<div class="hidden sm:flex items-center gap-1 font-body-sm">
+<span>Linhas por página:</span>
+<select class="bg-surface-container-lowest text-on-surface font-data-mono-sm rounded px-1.5 py-0.5 border-none shadow-sm focus:ring-1 focus:ring-secondary">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+</select>
+</div>
+</div>
+<!-- Pagination Buttons -->
+<div class="flex items-center gap-1">
+<button class="p-1 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm disabled:opacity-40 disabled:cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[18px]">first_page</span>
+</button>
+<button class="p-1 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm disabled:opacity-40 disabled:cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<div class="flex items-center gap-1 px-1">
+<button class="w-7 h-7 rounded font-data-mono-sm text-data-mono-sm font-semibold bg-primary text-on-primary">1</button>
+<button class="w-7 h-7 rounded font-data-mono-sm text-data-mono-sm text-on-surface hover:bg-surface-container">2</button>
+<button class="w-7 h-7 rounded font-data-mono-sm text-data-mono-sm text-on-surface hover:bg-surface-container">3</button>
+<span class="text-on-surface-variant px-0.5">...</span>
+<button class="w-7 h-7 rounded font-data-mono-sm text-data-mono-sm text-on-surface hover:bg-surface-container">7</button>
+</div>
+<button class="p-1 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="p-1 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">last_page</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Governance, Audit Trail & Visual Insight Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Audit Compliance & LGPD Card -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[28px]">gavel</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">Governança de Dados &amp; LGPD</h3>
+<span class="bg-[#ecfdf5] text-[#065f46] font-data-mono-sm text-data-mono-sm px-1.5 py-0.5 rounded font-semibold">Ledger Ativo</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Todos os registros contam com hash SHA-256 e assinatura digital de extração imutável para fins de auditoria regulatória SUSEP. 
+            Nenhum dado sensível de executivos (PII) é mantido em cache além dos limites contratuais.
+          </p>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 mt-space-sm font-data-mono-sm text-data-mono-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-[#10b981]">lock</span>
+              Último Hash Bloco: #84920fa...b91c
+            </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+              Certificado ICP-Brasil A3
+            </span>
+</div>
+</div>
+</div>
+<div class="flex sm:flex-col gap-space-xs w-full sm:w-auto shrink-0">
+<button class="w-full sm:w-auto px-space-md py-2 bg-primary text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary-container transition-colors whitespace-nowrap text-center">
+          Baixar Certificado
+        </button>
+<button class="w-full sm:w-auto px-space-md py-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg hover:bg-surface-container transition-colors whitespace-nowrap text-center">
+          Logs de Auditoria
+        </button>
+</div>
+</div>
+<!-- Visual AI Distribution Mini Widget -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Distribuição por Risco</span>
+<span class="font-data-mono-sm text-data-mono-sm text-secondary font-semibold">Últimos 90d</span>
+</div>
+<!-- Inline SVG Analytics Chart (Progress Bars / Mini Visualizer) -->
+<div class="flex flex-col gap-space-sm my-space-xs">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-data-mono-sm text-data-mono-sm">
+<span class="text-on-surface">Baixo Risco (Score &gt; 80)</span>
+<span class="font-bold text-on-surface">68%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 68%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-data-mono-sm text-data-mono-sm">
+<span class="text-on-surface">Risco Moderado (Score 60-79)</span>
+<span class="font-bold text-on-surface">24%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-[#f59e0b] rounded-full" style="width: 24%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-data-mono-sm text-data-mono-sm">
+<span class="text-on-surface">Crítico / Não Recomendado</span>
+<span class="font-bold text-on-surface">8%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 8%;"></div>
+</div>
+</div>
+</div>
+<div class="pt-space-xs border-t border-surface-container-high/40 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tempo médio de análise:</span>
+<span class="font-data-mono-sm text-data-mono-sm font-bold text-on-surface">14.2 segundos</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple table interactive filter handler for prototype realism
+  const searchInput = document.getElementById('history-search');
+  if (searchInput) {
+    searchInput.addEventListener('input', function(e) {
+      const val = e.target.value.toLowerCase();
+      const rows = document.querySelectorAll('tbody tr');
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(val) ? '' : 'none';
+      });
+    });
+  }
+</script></main></div></body></html>

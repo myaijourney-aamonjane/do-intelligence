@@ -1,0 +1,83 @@
+# ==========================================
+# Ambientes Virtuais & Dependências Python
+# ==========================================
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.spec
+
+# ==========================================
+# Frontend & Dependências Node / React
+# ==========================================
+node_modules/
+dist/
+build/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==========================================
+# Variáveis de Ambiente & Chaves / Segredos
+# ==========================================
+.env
+.env.*
+!.env.example
+secrets.txt
+*.pem
+*.key
+*.cert
+
+# ==========================================
+# Bases de Dados & Dados (Incluídos no Git)
+# ==========================================
+# As bases de dados SQLite (*.db) e dados de apólices são rastreados no repositório.
+
+
+# ==========================================
+# Sistema Operacional (Windows / macOS / Linux)
+# ==========================================
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ==========================================
+# IDEs & Editores (VS Code, JetBrains)
+# ==========================================
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ==========================================
+# Arquivos de Teste & Diagnóstico Locais
+# ==========================================
+debug_diagnosis.py
+test_timing.py
+test_file_upload.py
+test_image_flow.py
+test_doc_list.py
+task.md.resolved*
+*.tmp
+*.temp
+
+# ==========================================
+# Vídeos & Arquivos Grandes (>100MB GitHub)
+# ==========================================
+*.mp4
+

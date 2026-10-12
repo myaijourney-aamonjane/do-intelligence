@@ -1,0 +1,19 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic[v2]
+alembic
+pyyaml
+python-dotenv
+
+# RAG and AI
+langchain
+langgraph
+chromadb
+pyyaml
+
+# OCR
+pytesseract
+pdf2image
+
+# Frontend (will be in separate package)

@@ -1,0 +1,51 @@
+# Walkthrough — Remoção de Dados Mock e Integração Real com Base de Dados
+
+## Resumo das Alterações
+
+Todos os dados fictícios (*mock*) foram removidos de todas as páginas da plataforma **D&O Intelligence**. O sistema agora obtém 100% das suas informações diretamente dos endpoints da API conectados à base de dados SQLite (`do_intelligence.db`). Além disso, todas as referências de moeda em todo o ecossistema (frontend, backend e suites de teste) foram padronizadas para **Real (BRL / R$)**.
+
+---
+
+## 🛠️ Alterações por Componente
+
+### 1. **Detalhes da Apólice ([PolicyDetail.tsx](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/frontend/src/pages/PolicyDetail.tsx))**
+- Removido todo o objeto de fallback com valores pré-configurados.
+- Os dados da apólice, campos extraídos, cláusulas e evidências são carregados diretamente de:
+  - `GET /v1/policies/{id}`
+  - `GET /v1/policies/{id}/fields`
+  - `GET /v1/policies/{id}/clauses`
+  - `GET /v1/policies/{id}/evidence`
+- Adicionado estado limpo de "Apólice não encontrada" para casos em que o ID não exista na base de dados.
+
+### 2. **Dashboard Principal ([Dashboard.tsx](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/frontend/src/pages/Dashboard.tsx))**
+- Removido a lista `defaultMockPolicies`.
+- O Dashboard agora calcula todas as estatísticas (Total de Apólices, Apólices Ativas, Apólices com Alerta) dinamicamente a partir dos contratos registados na base de dados.
+- O feed de **Análises Recentes** reflete a lista real devolvida por `GET /v1/policies`.
+
+### 3. **Auditoria de Evidências ([EvidenceAudit.tsx](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/frontend/src/pages/EvidenceAudit.tsx))**
+- Removida a lista estática `evidenceItems`.
+- O componente lê o parâmetro de URL `?policyId=X` e consulta `/v1/policies/{id}/evidence` e `/v1/policies/{id}/fields` para apresentar trechos de evidência fundamentados (*grounded RAG*) extraídos do documento original.
+
+### 4. **Matriz de Comparações ([Comparisons.tsx](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/frontend/src/pages/Comparisons.tsx))**
+- Removido o fallback de contratos pré-carregados.
+- As apólices disponíveis para seleção no benchmark são populadas 100% via `GET /v1/policies`.
+
+### 5. **Logs & Auditoria ([Logs.tsx](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/frontend/src/pages/Logs.tsx))**
+- Removido o fallback de logs estáticos (`SEED_LOGS`).
+- O painel consulta a rota `/api/logs` no backend.
+
+### 6. **Backend & Testes ([orchestrator.py](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/backend/app/agents/orchestrator.py) & [test_agents.py](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/backend/test_agents.py))**
+- Atualizados os textos de fallback e fixtures de teste de `USD` para `R$`.
+
+---
+
+## 🔍 Verificação
+
+| Componente | Fonte de Dados | Moeda | Estado |
+| :--- | :--- | :--- | :--- |
+| **Policies Library** | `/v1/policies` | Real (R$) | ✅ Integrado |
+| **Policy Detail** | `/v1/policies/{id}/*` | Real (R$) | ✅ Integrado |
+| **Dashboard** | `/v1/policies` | Real (R$) | ✅ Integrado |
+| **Evidence Audit** | `/v1/policies/{id}/evidence` | Real (R$) | ✅ Integrado |
+| **Comparisons** | `/v1/policies`, `/v1/comparisons` | Real (R$) | ✅ Integrado |
+| **Logs** | `/api/logs` | Real (R$) | ✅ Integrado |

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary":"#0051d5","secondary-container":"#316bf3","inverse-surface":"#213145","tertiary-fixed":"#e1e0ff","primary":"#000000","inverse-on-surface":"#eaf1ff","surface-container-low":"#eff4ff","on-tertiary-fixed-variant":"#2f2ebe","on-primary-container":"#7c839b","surface-bright":"#f8f9ff","error":"#ba1a1a","secondary-fixed":"#dbe1ff","on-background":"#0b1c30","secondary-fixed-dim":"#b4c5ff","outline-variant":"#c6c6cd","on-surface-variant":"#45464d","primary-fixed":"#dae2fd","on-surface":"#0b1c30","surface":"#f8f9ff","on-primary":"#ffffff","on-primary-fixed":"#131b2e","on-error":"#ffffff","surface-tint":"#565e74","inverse-primary":"#bec6e0","tertiary":"#000000","primary-container":"#131b2e","on-tertiary-container":"#7073ff","outline":"#76777d","surface-container-lowest":"#ffffff","background":"#f8f9ff","surface-container-high":"#dce9ff","tertiary-container":"#07006c","primary-fixed-dim":"#bec6e0","surface-dim":"#cbdbf5","on-error-container":"#93000a","on-secondary-fixed-variant":"#003ea8","error-container":"#ffdad6","on-primary-fixed-variant":"#3f465c","on-tertiary-fixed":"#07006c","on-tertiary":"#ffffff","on-secondary-container":"#fefcff","on-secondary-fixed":"#00174b","surface-container":"#e5eeff","tertiary-fixed-dim":"#c0c1ff","on-secondary":"#ffffff","surface-container-highest":"#d3e4fe","surface-variant":"#d3e4fe"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-xl":"2rem","gutter-desktop":"1.5rem","space-md":"0.75rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter":"1rem","margin":"1rem","margin-desktop":"2rem","space-lg":"1.25rem"},fontFamily:{"body-sm":["Inter"],"data-mono-lg":["JetBrains Mono"],"headline-md":["Inter"],"headline-lg":["Inter"],"headline-xl":["Inter"],"body-md":["Inter"],"data-mono-sm":["JetBrains Mono"],"data-mono-md":["JetBrains Mono"],"headline-xl-mobile":["Inter"],"body-lg":["Inter"],"label-md":["Inter"]},fontSize:{"body-sm":["0.75rem",{"lineHeight":"1.125rem","fontWeight":"400"}],"data-mono-lg":["1rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-md":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-xl":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.025em","fontWeight":"700"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","fontWeight":"400"}],"data-mono-sm":["0.6875rem",{"lineHeight":"1rem","fontWeight":"500"}],"data-mono-md":["0.8125rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"headline-xl-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm"><img alt="D&amp;O Intelligence Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1ViNenoz4uomnClZqWwGSaGBJPY6u43-1mZ_Yxwc-szaGOR-YDLLmH2YYeyWaO5buoZlSxGV_C6FRp0IHVuwtMrUxu1-LoxSsK40F9ScoITvFQ8HWIwEzn0hM2O1ZgTXbaXYbDHKDf6CcpLP1c05J0Sybhx68qXkTXfW3RI5urXFrAvFKPftDmPBoKgfPp7Lws98oaYmunqvcqkcyvz8Hl5hZqdmZ0z-ldEzQGFioi8_4kxGPYVUAv65Ok"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-on-surface tracking-tight leading-tight">D&amp;O Intel</span><span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant uppercase">Policy Analysis</span></div></div><nav class="flex flex-col gap-space-xs px-space-sm mt-space-md" data-active-classes="bg-surface-container-high text-secondary font-semibold"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="apolices" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span class="font-body-md text-body-md">Apólices</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="nova-analise" href="#"><span class="material-symbols-outlined text-[20px]">upload_file</span><span class="font-body-md text-body-md">Nova Análise</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="comparacoes" href="#"><span class="material-symbols-outlined text-[20px]">balance</span><span class="font-body-md text-body-md">Comparações</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="relatorios" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-body-md text-body-md">Relatórios</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="historico" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span class="font-body-md text-body-md">Histórico</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="configuracoes" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Configurações</span></a></nav></div><div class="p-space-sm bg-surface-container-low m-space-sm rounded-lg flex flex-col gap-space-xs"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs overflow-hidden"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col truncate"><span class="font-label-md text-label-md text-on-surface truncate">Carlos Mendes</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Underwriter Sênior</span></div></div><a class="p-space-xs text-on-surface-variant hover:text-error hover:bg-surface-container-high rounded transition-colors shrink-0" data-path="login" href="#" title="Logout"><span class="material-symbols-outlined text-[20px]">logout</span></a></div><div class="pt-space-xs"><span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant block truncate">Alpha Re &amp; Seguros</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 px-gutter flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><span class="hover:text-on-surface">Alpha Re</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span class="text-on-surface font-semibold">D&amp;O Underwriting</span></div><div class="h-4 w-[1px] bg-surface-container-high"></div><div class="flex items-center gap-space-xs px-space-xs py-0.5 rounded-full bg-surface-container"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-data-mono-sm text-data-mono-sm text-secondary uppercase font-semibold">IA Online</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center w-72"><span class="material-symbols-outlined absolute left-space-sm text-[18px] text-on-surface-variant pointer-events-none">search</span><input class="w-full pl-8 pr-12 py-1.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary transition-all" placeholder="Buscar apólices, cláusulas..." type="text"/><kbd class="absolute right-space-sm font-data-mono-sm text-data-mono-sm text-on-surface-variant bg-surface-container-high px-1 rounded">⌘K</kbd></div><div class="flex items-center gap-space-xs"><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded transition-colors" title="Notificações" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-secondary text-on-secondary font-data-mono-sm text-[10px] flex items-center justify-center font-bold">3</span></button><button class="p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded transition-colors" title="Ajuda &amp; Documentação" type="button"><span class="material-symbols-outlined text-[22px]">help</span></button></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-gutter"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Context Header & Actions -->
+<section class="flex flex-col gap-space-md pt-space-md mb-space-lg">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<a class="hover:text-secondary transition-colors" href="#">Dashboard</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-secondary transition-colors" href="#">Comparações</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface bg-surface-container-high px-1.5 py-0.5 rounded">DO-2026-00124 vs DO-2026-00892</span>
+</nav>
+<!-- Header Actions & Titles -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Comparação de Apólices D&amp;O: <span class="text-secondary">ABC Insurance</span> vs <span class="text-on-surface-variant">XYZ Insurance</span>
+</h1>
+<div class="flex items-center gap-space-xs px-2 py-0.5 rounded-full bg-surface-container-high">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-md text-label-md text-secondary uppercase">Auditoria Comparativa IA Concluída</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+<span class="font-body-sm text-body-sm">Confiabilidade da IA:</span>
+<span class="font-data-mono-sm text-data-mono-sm font-semibold text-on-surface">97.4%</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Dossiê gerado com base em extração semântica profunda de 142 páginas normativas e endossos especiais.
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center flex-wrap gap-space-sm self-start lg:self-auto">
+<button class="flex items-center gap-space-xs px-3 py-2 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container transition-all" id="btnShare" type="button">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span class="font-body-md text-body-md font-semibold">Partilhar</span>
+</button>
+<button class="flex items-center gap-space-xs px-3 py-2 rounded-lg bg-surface-container-high text-secondary hover:bg-surface-container-highest transition-all" id="btnEvidenceView" type="button">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+<span class="font-body-md text-body-md font-semibold">Ver Evidências Lado a Lado</span>
+</button>
+<button class="flex items-center gap-space-xs px-4 py-2 rounded-lg bg-primary text-on-primary shadow-sm hover:bg-primary-container transition-all" id="btnExportPDF" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span class="font-body-md text-body-md font-semibold">Exportar Relatório Comparativo (PDF)</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 1. Executive AI Summary Banner -->
+<section class="relative overflow-hidden rounded-xl bg-gradient-to-br from-surface-container-lowest via-surface-container-low to-surface-container p-space-lg shadow-sm mb-space-lg">
+<div class="relative z-10 flex flex-col gap-space-md">
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary text-on-secondary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Resumo Executivo da Análise Semântica</h2>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant bg-surface-container-lowest/80 px-2 py-1 rounded">
+          Algoritmo: DeepPolicy-v4.2 • Processado em 3.4s
+        </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed max-w-5xl">
+        A <strong>Apólice A (ABC Insurance)</strong> apresenta maior limite de responsabilidade global (<span class="font-data-mono-md text-data-mono-md font-semibold text-secondary">$10.000.000</span> vs <span class="font-data-mono-md text-data-mono-md font-semibold">$8.000.000</span>) e cobertura substancialmente mais ampla para custos de defesa e investigação CVM/SEC. A <strong>Apólice B (XYZ Insurance)</strong> apresenta uma franquia corporativa inferior (<span class="font-data-mono-md text-data-mono-md font-semibold">$150.000</span> vs <span class="font-data-mono-md text-data-mono-md font-semibold">$250.000</span>), porém introduz cláusula restritiva de insolvência que não existe na Apólice A.
+      </p>
+<!-- 3 Instant AI Highlight Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm mt-space-xs">
+<div class="flex items-start gap-space-sm p-space-md rounded-lg bg-surface-container-lowest shadow-sm hover:shadow transition-shadow">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-secondary">Apólice A: Superioridade de Limite</span>
+<span class="font-body-md text-body-md text-on-surface mt-0.5">Maior robustez Side A com <span class="font-data-mono-sm text-data-mono-sm font-bold text-secondary">+$2.000.000 LMG</span> sem sub-limitação severa de honorários advocatícios.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-md rounded-lg bg-surface-container-lowest shadow-sm hover:shadow transition-shadow">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant">Apólice B: Vantagem de Retenção</span>
+<span class="font-body-md text-body-md text-on-surface mt-0.5">Menor franquia operacional por sinistro corporativo com <span class="font-data-mono-sm text-data-mono-sm font-bold text-on-surface">-$100.000</span> de retenção exigida.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-md rounded-lg bg-error-container text-on-error-container shadow-sm">
+<div class="w-6 h-6 rounded-full bg-error text-on-error flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-error font-bold uppercase tracking-wide">Atenção Crítica de Risco</span>
+<span class="font-body-md text-body-md text-on-error-container mt-0.5">Cláusula de Exclusão de Insolvência ativa na <strong>Apólice B (Pág. 27)</strong>, desamparando administradores em recuperação judicial.</span>
+</div>
+</div>
+</div>
+<!-- Governance Disclaimer -->
+<div class="flex items-center gap-space-xs pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px]">gavel</span>
+<span>Aviso de governança corporativa: Análise assistida por IA — validar conclusões com um especialista antes da decisão final de subscrição e emissão de apólice.</span>
+</div>
+</div>
+</section>
+<!-- 2. Benchmark Scores Grid -->
+<section class="flex flex-col gap-space-md mb-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary">speed</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Score Comparativo por Categoria Técnica</h2>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Base ponderada SUSEP/Lloyd's Market Guidelines</span>
+</div>
+<!-- Overall Big Score Banner & Sub-metrics Bento -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Global Score Master Card (Col 4) -->
+<div class="lg:col-span-4 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Score Geral de Proteção</span>
+<span class="font-data-mono-sm text-data-mono-sm px-2 py-0.5 rounded bg-surface-container text-secondary font-bold">Δ +8 Pts</span>
+</div>
+<div class="flex items-baseline gap-space-sm mb-space-md">
+<span class="font-headline-xl text-headline-xl text-secondary">86</span>
+<span class="font-headline-md text-headline-md text-on-surface-variant">/ 100</span>
+<span class="font-label-md text-label-md px-2 py-0.5 rounded-full bg-surface-container-high text-secondary ml-auto">
+              🟢 ABC Insurance Vencedora
+            </span>
+</div>
+<!-- Dual Ring Chart Representation -->
+<div class="flex items-center justify-around py-space-sm bg-surface-container-low rounded-lg mb-space-md">
+<div class="flex flex-col items-center">
+<span class="font-label-md text-label-md text-secondary font-semibold">ABC Insurance</span>
+<div class="relative w-16 h-16 my-2 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="86, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-data-mono-md text-data-mono-md font-bold text-on-surface">86%</span>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Classificação A+</span>
+</div>
+<div class="h-16 w-px bg-surface-container-high"></div>
+<div class="flex flex-col items-center">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">XYZ Insurance</span>
+<div class="relative w-16 h-16 my-2 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-on-surface-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="78, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-data-mono-md text-data-mono-md font-bold text-on-surface">78%</span>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Classificação B</span>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          A apólice da ABC Insurance entrega 10.2% a mais de aderência jurídica em cenários litigiosos complexos, compensando sua franquia Side B mais elevada.
+        </p>
+</div>
+<!-- Category Progress Bars (Col 8) -->
+<div class="lg:col-span-8 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-space-lg gap-y-space-md">
+<!-- Item 1: Cobertura & Limites -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex justify-between items-baseline">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Cobertura &amp; Limites</span>
+<div class="flex items-center gap-space-xs font-data-mono-sm text-data-mono-sm">
+<span class="text-secondary font-bold">ABC 92</span>
+<span class="text-on-surface-variant">vs</span>
+<span class="text-on-surface-variant">XYZ 74</span>
+</div>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-secondary h-full transition-all duration-500" style="width: 92%"></div>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden flex opacity-75">
+<div class="bg-outline h-full transition-all duration-500" style="width: 74%"></div>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-secondary font-medium mt-0.5">🟢 ABC +18 pts (Maior LMG e Side A)</span>
+</div>
+<!-- Item 2: Franquias & Retenções -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex justify-between items-baseline">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Franquias &amp; Retenções</span>
+<div class="flex items-center gap-space-xs font-data-mono-sm text-data-mono-sm">
+<span class="text-on-surface-variant">ABC 75</span>
+<span class="text-on-surface-variant">vs</span>
+<span class="text-secondary font-bold">XYZ 88</span>
+</div>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-outline h-full transition-all duration-500" style="width: 75%"></div>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden flex opacity-75">
+<div class="bg-secondary h-full transition-all duration-500" style="width: 88%"></div>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface font-medium mt-0.5">🟢 XYZ +13 pts (Retenção $100k menor)</span>
+</div>
+<!-- Item 3: Exclusões & Severidade -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex justify-between items-baseline">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Exclusões &amp; Severidade</span>
+<div class="flex items-center gap-space-xs font-data-mono-sm text-data-mono-sm">
+<span class="text-secondary font-bold">ABC 90</span>
+<span class="text-on-surface-variant">vs</span>
+<span class="text-error font-bold">XYZ 68</span>
+</div>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-secondary h-full transition-all duration-500" style="width: 90%"></div>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden flex opacity-75">
+<div class="bg-error h-full transition-all duration-500" style="width: 68%"></div>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-secondary font-medium mt-0.5">🟢 ABC Muito Superior (+22 pts)</span>
+</div>
+<!-- Item 4: Flexibilidade & Retroatividade -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex justify-between items-baseline">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Flexibilidade &amp; Retroatividade</span>
+<div class="flex items-center gap-space-xs font-data-mono-sm text-data-mono-sm">
+<span class="text-secondary font-bold">ABC 88</span>
+<span class="text-on-surface-variant">vs</span>
+<span class="text-on-surface-variant">XYZ 82</span>
+</div>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-secondary h-full transition-all duration-500" style="width: 88%"></div>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden flex opacity-75">
+<div class="bg-outline h-full transition-all duration-500" style="width: 82%"></div>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-secondary font-medium mt-0.5">🟢 ABC +6 pts (Data retroativa ilimitada)</span>
+</div>
+<!-- Item 5: Extensões Regulatórias -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg hover:bg-surface-container-low transition-colors md:col-span-2">
+<div class="flex justify-between items-baseline">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Extensões Regulatórias (CVM, SEC &amp; ESG)</span>
+<div class="flex items-center gap-space-xs font-data-mono-sm text-data-mono-sm">
+<span class="text-secondary font-bold">ABC 85</span>
+<span class="text-on-surface-variant">vs</span>
+<span class="text-on-surface-variant">XYZ 76</span>
+</div>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-secondary h-full transition-all duration-500" style="width: 85%"></div>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden flex opacity-75">
+<div class="bg-outline h-full transition-all duration-500" style="width: 76%"></div>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-secondary font-medium mt-0.5">🟢 ABC +9 pts (Garantia de defesa regulatória de $2.5M)</span>
+</div>
+</div>
+<!-- Legend -->
+<div class="flex items-center gap-space-md pt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span>ABC Insurance (Apólice A)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-outline"></span>
+<span>XYZ Insurance (Apólice B)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Central Policy Comparison Matrix Table -->
+<section class="flex flex-col rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden mb-space-lg">
+<!-- Matrix Header Controls -->
+<div class="p-space-md bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary">table_chart</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Matriz Comparativa de Cláusulas e Condições</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Auditoria linha a linha com mapeamento de endossos e apólices originais</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1 rounded bg-secondary text-on-secondary font-label-md text-label-md" id="filterAll" type="button">Todos (12)</button>
+<button class="px-3 py-1 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md" id="filterDivergent" type="button">Apenas Divergências</button>
+<button class="px-3 py-1 rounded bg-surface-container-lowest text-error hover:bg-error-container font-label-md text-label-md" id="filterCritical" type="button">Críticos (3)</button>
+</div>
+</div>
+<!-- The Dense Data Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high/60 text-on-surface-variant font-label-md text-label-md">
+<th class="py-3 px-space-md w-1/4">Critério de Cobertura</th>
+<th class="py-3 px-space-md w-1/4">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Apólice A: ABC Insurance</span>
+</div>
+</th>
+<th class="py-3 px-space-md w-1/4">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span>Apólice B: XYZ Insurance</span>
+</div>
+</th>
+<th class="py-3 px-space-md w-1/4">Diferença &amp; Avaliação IA</th>
+<th class="py-3 pr-space-md w-16 text-right">Ação</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40 font-body-md text-body-md">
+<!-- Row 1: LMG -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Limite Global (LMG)</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Cláusula 2.1 • Agregado Anual</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-data-mono-md text-data-mono-md font-semibold text-on-surface">$10.000.000</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-data-mono-md text-data-mono-md text-on-surface-variant">$8.000.000</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-md text-label-md">
+<span>🟢 +$2.000.000 (Melhor na Apólice A)</span>
+</div>
+</td>
+<td class="py-3 pr-space-md text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" onclick="openEvidence('LMG', 'Cláusula 2.1 - Limite Máximo de Garantia', 'ABC: Pág 4, item 2.1 | XYZ: Pág 6, item 1.4')" title="Ver Evidência">
+<span class="material-symbols-outlined text-[18px]">find_in_page</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Franquia Side B -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Franquia / Retenção Side B</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Reembolso Corporativo</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-data-mono-md text-data-mono-md text-on-surface-variant">$250.000</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-data-mono-md text-data-mono-md font-semibold text-on-surface">$150.000</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
+<span>🟢 Apólice B tem franquia $100k menor</span>
+</div>
+</td>
+<td class="py-3 pr-space-md text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" onclick="openEvidence('Franquia Side B', 'Tabela de Retenções Dedutíveis', 'ABC: Pág 8, item 4.2 | XYZ: Pág 9, item 3.1')" title="Ver Evidência">
+<span class="material-symbols-outlined text-[18px]">find_in_page</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Retenção Side A -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Retenção Side A</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Diretores Individuais Não-Indenizáveis</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-data-mono-md text-data-mono-md text-on-surface">$0 (Zero Franquia)</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-data-mono-md text-data-mono-md text-on-surface">$0 (Zero Franquia)</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">Paridade Integral</span>
+</td>
+<td class="py-3 pr-space-md text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" onclick="openEvidence('Side A', 'Condições Gerais - Side A', 'Ambas contemplam isenção total de dedutível')" title="Ver Evidência">
+<span class="material-symbols-outlined text-[18px]">find_in_page</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Custos de Defesa -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group bg-error-container/10">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Custos de Defesa e Honorários</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Adiantamento de Despesas Legais</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span class="font-semibold text-on-surface">100% adiantado s/ sublimite</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-data-mono-md text-data-mono-md text-error font-semibold">Sublimitado a $3.000.000</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-md text-label-md">
+<span>🔴 XYZ impõe teto restritivo de $3M</span>
+</div>
+</td>
+<td class="py-3 pr-space-md text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" onclick="openEvidence('Custos de Defesa', 'Honorários e Perícias', 'ABC: Pág 11, item 5.1 | XYZ: Endosso E-03, Pág 32')" title="Ver Evidência">
+<span class="material-symbols-outlined text-[18px]">find_in_page</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Investigação Regulatória -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Investigação Regulatória (CVM/SEC)</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Processos Administrativos Sancionadores</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-data-mono-md text-data-mono-md font-semibold text-secondary">$2.500.000</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-data-mono-md text-data-mono-md text-on-surface-variant">$1.000.000</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-md text-label-md">
+<span>🟢 ABC oferece +$1.5M de garantia</span>
+</div>
+</td>
+<td class="py-3 pr-space-md text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" onclick="openEvidence('Investigação Regulatória', 'Inquéritos CVM / SEC / BACEN', 'ABC: Pág 14, Art 8 | XYZ: Pág 18, Art 6')" title="Ver Evidência">
+<span class="material-symbols-outlined text-[18px]">find_in_page</span>
+</button>
+</td>
+</tr>
+<!-- Row 6: Cobertura de Crise -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Cobertura de Crise &amp; Reputação</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Gestão de RP e Assessoria de Imprensa</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-data-mono-md text-data-mono-md font-semibold text-on-surface">$1.000.000</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-data-mono-md text-data-mono-md text-on-surface-variant">$500.000</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-md text-label-md">
+<span>🟢 Maior resguardo ABC (+100%)</span>
+</div>
+</td>
+<td class="py-3 pr-space-md text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" onclick="openEvidence('Crise &amp; Reputação', 'Comunicação e Relações Públicas', 'ABC: Endosso 02 | XYZ: Cláusula Geral 12')" title="Ver Evidência">
+<span class="material-symbols-outlined text-[18px]">find_in_page</span>
+</button>
+</td>
+</tr>
+<!-- Row 7: Extensões Executivos -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Extensões para Executivos</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Despesas Emergenciais &amp; Bloqueio Bens</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Até $500.000 s/ aviso prévio</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-body-md text-body-md text-on-surface-variant">Apenas $200.000</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-md text-label-md">
+<span>🟢 Condição superior ABC</span>
+</div>
+</td>
+<td class="py-3 pr-space-md text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" onclick="openEvidence('Extensões Executivos', 'Despesas Emergenciais', 'ABC: Pág 19, Art 12 | XYZ: Pág 22, Art 10')" title="Ver Evidência">
+<span class="material-symbols-outlined text-[18px]">find_in_page</span>
+</button>
+</td>
+</tr>
+<!-- Row 8: Exclusões Relevantes (Critical) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group bg-error-container/15">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-error">dangerous</span>
+<span class="font-semibold text-error">Exclusões Relevantes</span>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-error">Ponto de Maior Divergência</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="text-on-surface font-medium">Clássicas (Fraude/Dolo com Final Adjudication &amp; Severability)</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="text-error font-semibold">Exclusão Total de Insolvência e Danos Ambientais Severos</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-error font-label-md text-label-md">
+<span>🔴 Alerta Crítico na Apólice B (Pág. 27)</span>
+</div>
+</td>
+<td class="py-3 pr-space-md text-right">
+<button class="p-1 rounded text-error hover:bg-error-container transition-colors" onclick="openEvidence('Exclusões Relevantes', 'Cláusula de Insolvência na XYZ', 'ABC: Pág 24 (Sem exclusão insolvência) | XYZ: Pág 27, Cláusula 14.9 (Exclusão explícita)')" title="Ver Evidência Crítica">
+<span class="material-symbols-outlined text-[18px]">find_in_page</span>
+</button>
+</td>
+</tr>
+<!-- Row 9: Retroatividade -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Data de Retroatividade</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Claims-Made Trigger</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-semibold text-secondary">Irrestrita / Ilimitada</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-data-mono-md text-data-mono-md text-on-surface-variant">01/01/2021 (5 anos)</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">
+<span>🟡 Risco de atos pretéritos na XYZ</span>
+</div>
+</td>
+<td class="py-3 pr-space-md text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" onclick="openEvidence('Retroatividade', 'Data de Retroatividade', 'ABC: Apólice contínua desde fundação | XYZ: Limite fixado em 2021')" title="Ver Evidência">
+<span class="material-symbols-outlined text-[18px]">find_in_page</span>
+</button>
+</td>
+</tr>
+<!-- Row 10: Período de Reporte -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Período de Reporte Complementar</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Prazo Estendido de Notificação</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-semibold text-on-surface">36 meses (Automático)</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="text-on-surface-variant">24 meses</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-md text-label-md">
+<span>🟢 +12 meses de extensão ABC</span>
+</div>
+</td>
+<td class="py-3 pr-space-md text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" onclick="openEvidence('Prazo Complementar', 'Extensão de Notificação', 'ABC: Pág 31 | XYZ: Pág 35')" title="Ver Evidência">
+<span class="material-symbols-outlined text-[18px]">find_in_page</span>
+</button>
+</td>
+</tr>
+<!-- Row 11: Território & Jurisdição -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Território &amp; Jurisdição</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Âmbito Geográfico de Cobertura</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-semibold text-secondary">Mundial (Inclusive EUA/Canadá)</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="text-error font-medium">América Latina apenas</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-md text-label-md">
+<span>🔴 Limitação geográfica na XYZ</span>
+</div>
+</td>
+<td class="py-3 pr-space-md text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" onclick="openEvidence('Território', 'Jurisdição Aplicável', 'ABC: Worldwide | XYZ: Exclui EUA, Europa e Ásia')" title="Ver Evidência">
+<span class="material-symbols-outlined text-[18px]">find_in_page</span>
+</button>
+</td>
+</tr>
+<!-- Row 12: Condições Especiais -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Condições Especiais: Poluição</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Write-back de Defesa Ambiental</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="text-on-surface font-semibold">Write-back integral de custos de defesa</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="text-on-surface-variant">Exclusão absoluta de poluição</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-md text-label-md">
+<span>🟢 ABC preserva defesa jurídica</span>
+</div>
+</td>
+<td class="py-3 pr-space-md text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" onclick="openEvidence('Poluição', 'Endosso Ambiental', 'ABC: Endosso E-08 com defesa | XYZ: Cláusula de exclusão 18.2')" title="Ver Evidência">
+<span class="material-symbols-outlined text-[18px]">find_in_page</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Quick Metadata -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> 8 Vantagens ABC</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-outline"></span> 1 Vantagem XYZ</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-error"></span> 3 Pontos Críticos</span>
+</div>
+<div class="font-data-mono-sm text-data-mono-sm">
+        Última sincronização de dados: Hoje às 16:42 BRT
+      </div>
+</div>
+</section>
+<!-- Side-by-Side Evidence Slideout / Drawer (Interactive AI Inspection Modal) -->
+<aside class="fixed inset-y-0 right-0 w-full max-w-2xl bg-surface-container-lowest shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col" id="evidenceModal">
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">auto_stories</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-surface" id="modalEvidenceTitle">Auditoria de Evidência Documental</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="modalEvidenceSubtitle">Confronto semântico de trechos extraídos</span>
+</div>
+</div>
+<button class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" onclick="closeEvidence()">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto p-space-lg flex flex-col gap-space-md">
+<!-- Info notice -->
+<div class="p-space-md rounded-lg bg-surface-container-low text-on-surface flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary mt-0.5">verified</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-secondary">Extração de OCR com Precisão Certificada</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="modalEvidenceDetails">Carregando detalhes...</span>
+</div>
+</div>
+<!-- Left / Right Policy Snippet Comparison -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- ABC Excerpt -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-md text-label-md text-secondary font-bold">ABC Insurance (Apólice A)</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Aprovado</span>
+</div>
+<div class="font-data-mono-sm text-data-mono-sm p-space-sm rounded bg-surface-container text-on-surface leading-relaxed border-l-2 border-secondary">
+            "Fica garantido expressamente o pagamento antecipado e ilimitado de todas as despesas razoáveis de defesa jurídica, honorários advocatícios e depósitos recursais incorridos pelos Segurados, até o esgotamento do Limite Máximo de Garantia (LMG)."
+          </div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Pág. 11, Cláusula 5.1 (Defesa do Segurado)</span>
+</div>
+<!-- XYZ Excerpt -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-md text-label-md text-error font-bold">XYZ Insurance (Apólice B)</span>
+<span class="font-data-mono-sm text-data-mono-sm text-error">Restritivo</span>
+</div>
+<div class="font-data-mono-sm text-data-mono-sm p-space-sm rounded bg-error-container/40 text-on-error-container leading-relaxed border-l-2 border-error">
+            "Não obstante qualquer disposição em contrário nestas condições gerais, a Seguradora não indenizará ou adiantará custos de defesa caso a Sociedade entre em processo de recuperação judicial, insolvência ou liquidação extrajudicial decretada."
+          </div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Pág. 27, Cláusula 14.9 (Exclusão de Insolvência)</span>
+</div>
+</div>
+<!-- Underwriter Commentary Box -->
+<div class="p-space-md rounded-lg bg-surface-container-high/40 flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface uppercase">Parecer de Subscrição Sênior</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          A inclusão da exclusão de insolvência na Apólice B descaracteriza um dos propósitos centrais da proteção de administradores em cenários de turnaround e reestruturação de dívida. Recomenda-se a rejeição da Apólice B a menos que haja endosso de corte para remoção da cláusula 14.9.
+        </p>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low flex items-center justify-end gap-space-sm">
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md font-medium hover:bg-surface-container transition-colors" onclick="closeEvidence()">
+        Fechar
+      </button>
+<button class="px-4 py-2 rounded-lg bg-secondary text-on-secondary font-body-md text-body-md font-semibold hover:bg-secondary-container transition-colors" onclick="alert('Marcador de evidência adicionado ao relatório executivo.')">
+        Fixar no Parecer Final
+      </button>
+</div>
+</aside>
+<!-- Interactive JavaScript logic for micro-interactions -->
+<script>
+    function openEvidence(title, subtitle, details) {
+      const modal = document.getElementById('evidenceModal');
+      document.getElementById('modalEvidenceTitle').innerText = title;
+      document.getElementById('modalEvidenceSubtitle').innerText = subtitle;
+      document.getElementById('modalEvidenceDetails').innerText = details;
+      modal.classList.remove('translate-x-full');
+    }
+
+    function closeEvidence() {
+      const modal = document.getElementById('evidenceModal');
+      modal.classList.add('translate-x-full');
+    }
+
+    document.getElementById('btnEvidenceView')?.addEventListener('click', () => {
+      openEvidence(
+        'Inspeção Documental Global',
+        'Visualização Sincronizada Lado a Lado',
+        'Exibindo correspondência de 142 páginas entre ABC Insurance (Apólice A) e XYZ Insurance (Apólice B)'
+      );
+    });
+
+    document.getElementById('btnExportPDF')?.addEventListener('click', () => {
+      const btn = document.getElementById('btnExportPDF');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span> Gerando PDF...';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span> Relatório Pronto!';
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, 2000);
+      }, 1500);
+    });
+
+    document.getElementById('btnShare')?.addEventListener('click', () => {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href);
+        alert('Link da comparação D&O copiado para a área de transferência!');
+      } else {
+        alert('Link copiado com sucesso.');
+      }
+    });
+
+    // Quick Matrix Filter buttons
+    const filterAll = document.getElementById('filterAll');
+    const filterCritical = document.getElementById('filterCritical');
+    const filterDivergent = document.getElementById('filterDivergent');
+    const rows = document.querySelectorAll('tbody tr');
+
+    filterAll?.addEventListener('click', () => {
+      rows.forEach(r => r.style.display = '');
+      setActiveFilter(filterAll);
+    });
+
+    filterCritical?.addEventListener('click', () => {
+      rows.forEach(r => {
+        if (r.classList.contains('bg-error-container/15') || r.classList.contains('bg-error-container/10') || r.innerText.includes('🔴')) {
+          r.style.display = '';
+        } else {
+          r.style.display = 'none';
+        }
+      });
+      setActiveFilter(filterCritical);
+    });
+
+    filterDivergent?.addEventListener('click', () => {
+      rows.forEach(r => {
+        if (r.innerText.includes('Paridade Integral')) {
+          r.style.display = 'none';
+        } else {
+          r.style.display = '';
+        }
+      });
+      setActiveFilter(filterDivergent);
+    });
+
+    function setActiveFilter(btn) {
+      [filterAll, filterCritical, filterDivergent].forEach(b => {
+        b.className = 'px-3 py-1 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md';
+      });
+      btn.className = 'px-3 py-1 rounded bg-secondary text-on-secondary font-label-md text-label-md';
+    }
+  </script>
+</div></main></div></body></html>

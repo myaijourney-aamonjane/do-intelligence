@@ -1,0 +1,72 @@
+# Technical Implementation Plan - Comprehensive Application Upgrade
+
+Upgrade the D&O Intelligence MVP application by aligning the React frontend with all 13 screen layouts in `demo_menus`, implementing full evidence traceability, high-density B2B dashboard analytics, policy comparison matrices, side-by-side evidence inspection, and executive reporting.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - All 13 screen layout reference designs in `demo_menus` will be integrated into the React frontend.
+> - Material Symbols Outlined icons and curated B2B InsurTech styling (Navy, Slate, Emerald, Amber, Crimson accents) will be incorporated.
+> - Full traceability (Document -> Page -> Text Chunk -> Evidence -> Confidence Score) will be enabled across Policy Details, Evidence Viewer, and Comparisons.
+
+## Proposed Changes
+
+### Backend Enhancements
+
+#### [MODIFY] [orchestrator.py](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/backend/app/agents/orchestrator.py)
+- Ensure generated policy data includes rich clause classifications, evidence grounding with exact page numbers, confidence metrics, and complete comparison criteria.
+
+#### [MODIFY] [endpoints.py](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/backend/app/api/endpoints.py) & [policies.py](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/backend/app/api/policies.py) & [comparisons.py](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/backend/app/api/comparisons.py)
+- Expand response fields to support scores, risk alerts, subscription flags, and full evidence snippets for Policy A vs Policy B comparison views.
+
+### Frontend Modernization (`demo_menus` Specifications)
+
+#### [MODIFY] [Layout.tsx](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/frontend/src/Layout.tsx)
+- Upgrade navigation sidebar with Material Symbols, company brand badge, active state highlights, search bar (`⌘K`), notification drawer, and user profile header.
+
+#### [MODIFY] [Dashboard.tsx](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/frontend/src/pages/Dashboard.tsx)
+- Rebuild layout based on `demo_menus/dashboard_d_o_intelligence`:
+  - 4 KPI metric cards (Apólices Analisadas, Comparações Realizadas, Documentos Processados, Análises com Alertas).
+  - High-density recent analyses table with Live Audit badges, scores (/100), and action buttons.
+  - Subscription Risk Alerts card.
+  - Vertical Timeline Stepper for real-time document processing pipeline.
+
+#### [MODIFY] [NewAnalysis.tsx](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/frontend/src/pages/NewAnalysis.tsx)
+- Rebuild upload view based on `demo_menus/nova analise` and `processamento_por_ia_pipeline_em_andamento`:
+  - Interactive Drag & Drop dropzone for PDF/PNG/JPG files.
+  - Step-by-step progress pipeline stepper (Documento recebido -> Extração de texto -> OCR -> Identificação de cláusulas -> Análise IA -> Estruturação).
+
+#### [MODIFY] [PolicyDetail.tsx](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/frontend/src/pages/PolicyDetail.tsx)
+- Rebuild policy detail view based on `demo_menus/ap_lice_d_o_detalhes_e_resumo` and `informa_es_extra_das_pela_ia_transpar_ncia_e_rastreabilidade`:
+  - Header summary with overall AI confidence badge.
+  - Category tabs: Resumo, Coberturas, Exclusões, Limites, Franquias, Cláusulas, Evidências.
+  - Value, Confidence %, Page #, and "Ver Evidência" buttons for every field.
+
+#### [NEW] [EvidenceAudit.tsx](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/frontend/src/pages/EvidenceAudit.tsx)
+- Build split-screen viewer based on `demo_menus/visualiza_o_da_evid_ncia_split_screen_pdf_e_auditoria`:
+  - Left pane: Document page view with highlighted text.
+  - Right pane: Extracted information, confidence score, source page, and direct evidence groundings.
+
+#### [MODIFY] [Comparisons.tsx](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/frontend/src/pages/Comparisons.tsx)
+- Rebuild comparison page based on `demo_menus/comparar_ap_lices_sele_o_e_benchmark`, `compara_o_de_ap_lices_d_o_resultado_e_tabela_comparativa`, `principais_diferen_as_e_recomenda_o_da_ia`, and `auditoria_de_evid_ncia_comparativa_confronto_lado_a_lado`:
+  - Policy A vs Policy B selector dropdowns with benchmark button.
+  - Side-by-side comparative table with severity badges (High, Medium, Low).
+  - Side-by-Side Evidence Audit (Page confrontation for Policy A vs Policy B).
+  - AI Recommendation & Executive Insight cards.
+
+#### [MODIFY] [Report.tsx](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/frontend/src/pages/Report.tsx)
+- Rebuild report view based on `demo_menus/relat_rio_de_compara_o_de_ap_lices_d_o_parecer_executivo`:
+  - Executive report layout with summary, points of attention, comparative tables, and print/export buttons.
+
+#### [MODIFY] [Logs.tsx](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/frontend/src/pages/Logs.tsx) & [Settings.tsx](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/frontend/src/pages/Settings.tsx)
+- Rebuild history & audit log viewer (`demo_menus/hist_rico_de_an_lises_e_compara_es`) and settings area (`demo_menus/executive_underwriting_policy_intelligence`).
+
+## Verification Plan
+
+### Automated Tests
+- Build test: `npm run build` inside `do-intelligence/frontend`.
+- Python backend unit tests: `pytest` inside `do-intelligence/backend`.
+
+### Manual Verification
+- Test all navigation routes (`/`, `/nova-analise`, `/apolices`, `/apolices/:id`, `/evidencias/:id`, `/comparacoes`, `/relatorios/:id`, `/historico`, `/configuracoes`).
+- Test uploading a document, verifying status transitions, performing policy comparison, and reviewing evidence split-screen viewer.

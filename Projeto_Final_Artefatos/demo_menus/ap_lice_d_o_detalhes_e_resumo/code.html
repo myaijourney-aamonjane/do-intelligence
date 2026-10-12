@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary":"#0051d5","secondary-container":"#316bf3","inverse-surface":"#213145","tertiary-fixed":"#e1e0ff","primary":"#000000","inverse-on-surface":"#eaf1ff","surface-container-low":"#eff4ff","on-tertiary-fixed-variant":"#2f2ebe","on-primary-container":"#7c839b","surface-bright":"#f8f9ff","error":"#ba1a1a","secondary-fixed":"#dbe1ff","on-background":"#0b1c30","secondary-fixed-dim":"#b4c5ff","outline-variant":"#c6c6cd","on-surface-variant":"#45464d","primary-fixed":"#dae2fd","on-surface":"#0b1c30","surface":"#f8f9ff","on-primary":"#ffffff","on-primary-fixed":"#131b2e","on-error":"#ffffff","surface-tint":"#565e74","inverse-primary":"#bec6e0","tertiary":"#000000","primary-container":"#131b2e","on-tertiary-container":"#7073ff","outline":"#76777d","surface-container-lowest":"#ffffff","background":"#f8f9ff","surface-container-high":"#dce9ff","tertiary-container":"#07006c","primary-fixed-dim":"#bec6e0","surface-dim":"#cbdbf5","on-error-container":"#93000a","on-secondary-fixed-variant":"#003ea8","error-container":"#ffdad6","on-primary-fixed-variant":"#3f465c","on-tertiary-fixed":"#07006c","on-tertiary":"#ffffff","on-secondary-container":"#fefcff","on-secondary-fixed":"#00174b","surface-container":"#e5eeff","tertiary-fixed-dim":"#c0c1ff","on-secondary":"#ffffff","surface-container-highest":"#d3e4fe","surface-variant":"#d3e4fe"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-xl":"2rem","gutter-desktop":"1.5rem","space-md":"0.75rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter":"1rem","margin":"1rem","margin-desktop":"2rem","space-lg":"1.25rem"},fontFamily:{"body-sm":["Inter"],"data-mono-lg":["JetBrains Mono"],"headline-md":["Inter"],"headline-lg":["Inter"],"headline-xl":["Inter"],"body-md":["Inter"],"data-mono-sm":["JetBrains Mono"],"data-mono-md":["JetBrains Mono"],"headline-xl-mobile":["Inter"],"body-lg":["Inter"],"label-md":["Inter"]},fontSize:{"body-sm":["0.75rem",{"lineHeight":"1.125rem","fontWeight":"400"}],"data-mono-lg":["1rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-md":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-xl":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.025em","fontWeight":"700"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","fontWeight":"400"}],"data-mono-sm":["0.6875rem",{"lineHeight":"1rem","fontWeight":"500"}],"data-mono-md":["0.8125rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"headline-xl-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm"><img alt="D&amp;O Intelligence Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1ViNenoz4uomnClZqWwGSaGBJPY6u43-1mZ_Yxwc-szaGOR-YDLLmH2YYeyWaO5buoZlSxGV_C6FRp0IHVuwtMrUxu1-LoxSsK40F9ScoITvFQ8HWIwEzn0hM2O1ZgTXbaXYbDHKDf6CcpLP1c05J0Sybhx68qXkTXfW3RI5urXFrAvFKPftDmPBoKgfPp7Lws98oaYmunqvcqkcyvz8Hl5hZqdmZ0z-ldEzQGFioi8_4kxGPYVUAv65Ok"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-on-surface tracking-tight leading-tight">D&amp;O Intel</span><span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant uppercase">Policy Analysis</span></div></div><nav class="flex flex-col gap-space-xs px-space-sm mt-space-md" data-active-classes="bg-surface-container-high text-secondary font-semibold"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="apolices" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span class="font-body-md text-body-md">Apólices</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="nova-analise" href="#"><span class="material-symbols-outlined text-[20px]">upload_file</span><span class="font-body-md text-body-md">Nova Análise</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="comparacoes" href="#"><span class="material-symbols-outlined text-[20px]">balance</span><span class="font-body-md text-body-md">Comparações</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="relatorios" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-body-md text-body-md">Relatórios</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="historico" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span class="font-body-md text-body-md">Histórico</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="configuracoes" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Configurações</span></a></nav></div><div class="p-space-sm bg-surface-container-low m-space-sm rounded-lg flex flex-col gap-space-xs"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs overflow-hidden"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col truncate"><span class="font-label-md text-label-md text-on-surface truncate">Carlos Mendes</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Underwriter Sênior</span></div></div><a class="p-space-xs text-on-surface-variant hover:text-error hover:bg-surface-container-high rounded transition-colors shrink-0" data-path="login" href="#" title="Logout"><span class="material-symbols-outlined text-[20px]">logout</span></a></div><div class="pt-space-xs"><span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant block truncate">Alpha Re &amp; Seguros</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 px-gutter flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><span class="hover:text-on-surface">Alpha Re</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span class="text-on-surface font-semibold">D&amp;O Underwriting</span></div><div class="h-4 w-[1px] bg-surface-container-high"></div><div class="flex items-center gap-space-xs px-space-xs py-0.5 rounded-full bg-surface-container"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-data-mono-sm text-data-mono-sm text-secondary uppercase font-semibold">IA Online</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center w-72"><span class="material-symbols-outlined absolute left-space-sm text-[18px] text-on-surface-variant pointer-events-none">search</span><input class="w-full pl-8 pr-12 py-1.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary transition-all" placeholder="Buscar apólices, cláusulas..." type="text"/><kbd class="absolute right-space-sm font-data-mono-sm text-data-mono-sm text-on-surface-variant bg-surface-container-high px-1 rounded">⌘K</kbd></div><div class="flex items-center gap-space-xs"><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded transition-colors" title="Notificações" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-secondary text-on-secondary font-data-mono-sm text-[10px] flex items-center justify-center font-bold">3</span></button><button class="p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded transition-colors" title="Ajuda &amp; Documentação" type="button"><span class="material-symbols-outlined text-[22px]">help</span></button></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-gutter"><div class="flex flex-col w-full pb-space-xl">
+<!-- Page Header & Action Bar -->
+<div class="flex flex-col gap-space-md mb-space-lg">
+<!-- Breadcrumb -->
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<a class="hover:text-secondary transition-colors" href="#">Dashboard</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-secondary transition-colors" href="#">Apólices</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface font-semibold">DO-2026-00124</span>
+</div>
+<!-- Title & Top Actions Grid -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Apólice D&amp;O — ABC Insurance</h1>
+<div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-high text-secondary">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="font-label-md text-label-md">Auditada por IA</span>
+</div>
+</div>
+<!-- Key Metadata Ribbon -->
+<div class="flex items-center gap-space-md flex-wrap font-body-sm text-body-sm text-on-surface-variant pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-outline">corporate_fare</span>
+<span>Seguradora: <strong class="text-on-surface font-semibold">ABC Insurance</strong></span>
+</div>
+<div class="h-3 w-[1px] bg-outline-variant"></div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-outline">tag</span>
+<span>Nº Apólice: <strong class="font-data-mono-sm text-data-mono-sm text-on-surface font-semibold">DO-2026-00124</strong></span>
+</div>
+<div class="h-3 w-[1px] bg-outline-variant"></div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-outline">date_range</span>
+<span>Vigência: <strong class="text-on-surface font-semibold">01/01/2026 – 31/12/2026</strong></span>
+</div>
+<div class="h-3 w-[1px] bg-outline-variant"></div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-low text-secondary font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-data-mono-sm text-data-mono-sm uppercase tracking-wide">Analisada</span>
+</div>
+</div>
+</div>
+<!-- Quick Executive Action Controls -->
+<div class="flex items-center gap-space-sm shrink-0 flex-wrap">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container-low transition-all font-body-md text-body-md font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px]">balance</span>
+<span>Comparar Apólice</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container-low transition-all font-body-md text-body-md font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>Reanalisar</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container shadow-md transition-all font-body-md text-body-md font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Exportar Relatório Executivo (PDF)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Metric Summary Bento Grid (4 Core Metrics) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-xl">
+<!-- Card 1: Limite de Responsabilidade -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Limite de Responsabilidade</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-data-mono-lg text-headline-xl text-on-surface font-bold tracking-tight">$10.000.000</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Limite Máximo de Garantia (LMG) Agregado</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-space-xs text-secondary font-data-mono-sm text-data-mono-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>Side A, B &amp; C Agregados</span>
+</div>
+</div>
+<!-- Card 2: Franquia Retenção -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Franquia / Retenção</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-low text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-data-mono-lg text-headline-xl text-on-surface font-bold tracking-tight">$250.000</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Retenção por sinistro / Custos de Defesa</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-space-xs text-on-surface-variant font-data-mono-sm text-data-mono-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Zero Retenção para Side A Pessoal</span>
+</div>
+</div>
+<!-- Card 3: Vigência -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Período de Vigência</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-low text-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-data-mono-lg text-headline-xl text-on-surface font-bold tracking-tight">12 meses</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">01/01/2026 a 31/12/2026</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-space-xs text-secondary font-data-mono-sm text-data-mono-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">cloud_upload</span>
+<span>Retroatividade: Irrestrita</span>
+</div>
+</div>
+<!-- Card 4: Score da Apólice & Visual Ring -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Score da Apólice</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">verified_user</span>
+</div>
+<div class="flex items-center justify-between mt-space-md">
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-data-mono-lg text-headline-xl text-on-surface font-bold tracking-tight">82</span>
+<span class="font-data-mono-md text-data-mono-md text-on-surface-variant">/100</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 mt-1 rounded-md bg-surface-container-high text-secondary font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-[11px] leading-tight">Risco Moderado • Alta Proteção</span>
+</div>
+</div>
+<!-- Compact SVG Gauge -->
+<div class="relative w-14 h-14 shrink-0">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3.5"></path>
+<path class="text-secondary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="82, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-data-mono-sm text-data-mono-sm font-bold text-secondary">
+            82%
+          </div>
+</div>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-2">Validação estrutural em 48 cláusulas padrão</p>
+</div>
+</div>
+<!-- Primary Policy Tabs Navigation -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-px scrollbar-none bg-surface-container-lowest rounded-xl p-1.5 shadow-sm mb-space-lg">
+<button class="relative px-space-md py-space-sm rounded-lg font-body-md text-body-md font-semibold text-secondary bg-surface-container flex items-center gap-space-xs shrink-0 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">overview</span>
+<span>Resumo</span>
+<span class="absolute bottom-0 left-3 right-3 h-0.5 bg-secondary rounded-full"></span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-space-xs shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">security</span>
+<span>Coberturas</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-space-xs shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+<span>Exclusões</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-space-xs shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+<span>Limites</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-space-xs shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">price_change</span>
+<span>Franquias</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-space-xs shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">description</span>
+<span>Cláusulas</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-space-xs shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+<span>Partes e Segurados</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-space-xs shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">find_in_page</span>
+<span>Evidências</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-data-mono-sm text-data-mono-sm font-bold">14</span>
+</button>
+</div>
+<!-- Tab Content: Resumo Workspace -->
+<div class="flex flex-col gap-space-lg">
+<!-- Section 1: Informações Gerais & Context Header -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Informações Gerais do Contrato</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Identificação societária, tomador e parâmetros contratuais de underwriting</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Hash Doc:</span>
+<span class="font-data-mono-sm text-data-mono-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">sha256:7f4c9...09de</span>
+</div>
+</div>
+<!-- 2-Column Clean Structured Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-space-xl gap-y-space-md pt-space-md">
+<!-- Col 1 -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low/50">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Seguradora Emissora</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface mt-0.5">ABC Insurance Companhia de Seguros S.A.</span>
+</div>
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low/50">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Tomador / Sociedade Contratante</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface mt-0.5">TechVentures Global Participações S.A.</span>
+</div>
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low/50">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Segurados Elegíveis</span>
+<span class="font-body-md text-body-md font-medium text-on-surface mt-0.5">Administradores, Conselheiros, Diretores Estatutários e Procuradores</span>
+</div>
+</div>
+<!-- Col 2 -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low/50">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Número do Registro / Apólice</span>
+<span class="font-data-mono-md text-data-mono-md font-bold text-on-surface mt-0.5">DO-2026-00124 (SUSEP: 15414.900213/2026)</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low/50">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Data de Início</span>
+<span class="font-data-mono-md text-data-mono-md font-semibold text-on-surface mt-0.5">01/01/2026 <span class="font-body-sm text-[11px] text-on-surface-variant">(00h00)</span></span>
+</div>
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low/50">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Data de Término</span>
+<span class="font-data-mono-md text-data-mono-md font-semibold text-on-surface mt-0.5">31/12/2026 <span class="font-body-sm text-[11px] text-on-surface-variant">(24h00)</span></span>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-high/40">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Jurisdição e Foro Aplicável</span>
+</div>
+<span class="font-label-md text-label-md text-secondary font-semibold">São Paulo / Brasil (Lei 10.406/02)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Coberturas Principais Table & Analytical View -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">shield_with_heart</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Coberturas Principais e Sublimites</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Estrutura de garantias contratadas, Side A/B/C e extensões acessórias</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container text-on-surface-variant font-data-mono-sm text-data-mono-sm">
+<span class="material-symbols-outlined text-[14px]">filter_list</span>
+<span>6 Garantias Mapeadas</span>
+</div>
+</div>
+</div>
+<!-- High-Density Data Table -->
+<div class="overflow-x-auto rounded-lg bg-surface-container-lowest">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant">
+<th class="py-space-sm px-space-md font-label-md text-label-md uppercase tracking-wider w-1/4" scope="col">Cobertura</th>
+<th class="py-space-sm px-space-md font-label-md text-label-md uppercase tracking-wider w-36 text-center" scope="col">Incluída</th>
+<th class="py-space-sm px-space-md font-label-md text-label-md uppercase tracking-wider w-40 text-right" scope="col">Limite</th>
+<th class="py-space-sm px-space-md font-label-md text-label-md uppercase tracking-wider" scope="col">Observações Técnicas</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1: Side A -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Responsabilidade de Administradores (Side A)</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Cláusula 4.1 • Apólice Matriz</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-secondary font-label-md text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Sim / Incluída</span>
+</span>
+</td>
+<td class="py-space-md px-space-md text-right font-data-mono-md text-data-mono-md font-bold text-on-surface">
+                $10.000.000
+              </td>
+<td class="py-space-md px-space-md font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">
+                Proteção pessoal direta a conselheiros sem adiantamento corporativo e sem dedução de franquia individual.
+              </td>
+</tr>
+<!-- Row 2: Side B -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group bg-surface-container-low/20">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Responsabilidade de Diretores (Side B)</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Cláusula 4.2 • Reembolso à Sociedade</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-secondary font-label-md text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Sim / Incluída</span>
+</span>
+</td>
+<td class="py-space-md px-space-md text-right font-data-mono-md text-data-mono-md font-bold text-on-surface">
+                $10.000.000
+              </td>
+<td class="py-space-md px-space-md font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">
+                Reembolso à sociedade por indenizações pagas aos administradores amparados por estatuto corporativo.
+              </td>
+</tr>
+<!-- Row 3: Custos de Defesa -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Custos de Defesa</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Cláusula 5.0 • Honorários e Custas</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-secondary font-label-md text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Sim / Incluída</span>
+</span>
+</td>
+<td class="py-space-md px-space-md text-right font-data-mono-md text-data-mono-md font-bold text-on-surface">
+                $10.000.000
+              </td>
+<td class="py-space-md px-space-md font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">
+                Adiantamento periódico de honorários advocatícios, laudos periciais e custas recursais processuais.
+              </td>
+</tr>
+<!-- Row 4: Investigação Regulatória -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group bg-surface-container-low/20">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Investigação Regulatória</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Endosso nº 03 • Sublimite Específico</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-secondary font-label-md text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Sim / Incluída</span>
+</span>
+</td>
+<td class="py-space-md px-space-md text-right font-data-mono-md text-data-mono-md font-bold text-on-surface">
+                $2.500.000
+              </td>
+<td class="py-space-md px-space-md font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">
+                Sublimite para investigações formais perante a CVM, SEC e autoridades administrativas reguladoras.
+              </td>
+</tr>
+<!-- Row 5: Crises Reputação -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Crises (Gestão de Reputação)</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Endosso nº 07 • Mitigação de Danos</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-secondary font-label-md text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Sim / Incluída</span>
+</span>
+</td>
+<td class="py-space-md px-space-md text-right font-data-mono-md text-data-mono-md font-bold text-on-surface">
+                $1.000.000
+              </td>
+<td class="py-space-md px-space-md font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">
+                Sublimite para contratação de assessoria de imprensa especializada, RP e contenção imediata de danos à imagem.
+              </td>
+</tr>
+<!-- Row 6: Extensões Executivos -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group bg-surface-container-low/20">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Extensões para Executivos</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Cláusula 8.4 • Despesas Emergenciais</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-secondary font-label-md text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Sim / Incluída</span>
+</span>
+</td>
+<td class="py-space-md px-space-md text-right font-data-mono-md text-data-mono-md font-bold text-on-surface">
+                $500.000
+              </td>
+<td class="py-space-md px-space-md font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">
+                Cobertura complementar para custos emergenciais, bloqueio judicial de bens e despesas de fiança/caução.
+              </td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Inline Policy Extraction Confidence Footer -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pt-space-sm gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">psychology</span>
+<span>Extração de parâmetros com 99.4% de correspondência semântica com o clausulado regulatório.</span>
+</div>
+<div class="flex items-center gap-space-sm font-data-mono-sm text-data-mono-sm">
+<span class="text-on-surface-variant">LMG Total Alocado:</span>
+<span class="font-bold text-on-surface bg-surface-container px-2 py-0.5 rounded">$10.000.000</span>
+</div>
+</div>
+</div>
+<!-- Context Card: Risk & Underwriting Highlights -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center gap-space-xs text-on-surface mb-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary">gavel</span>
+<h3 class="font-headline-md text-headline-md">Preservação Side A</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Garantia dedicada e não dedutível de retenção para executivos individuais em caso de falência ou indisponibilidade financeira da holding.
+        </p>
+<div class="mt-space-md pt-space-xs font-data-mono-sm text-data-mono-sm text-secondary font-semibold">
+          Auditado conforme art. 158 da Lei 6.404/76
+        </div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center gap-space-xs text-on-surface mb-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary">warning_amber</span>
+<h3 class="font-headline-md text-headline-md">Atenção a Prazos de Notificação</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Aviso formal de sinistro ou circunstância deve ocorrer em até 60 dias do conhecimento pelo tomador para resguardo de honorários.
+        </p>
+<div class="mt-space-md pt-space-xs font-data-mono-sm text-data-mono-sm text-on-surface-variant font-semibold">
+          Cláusula de Circunstância 11.2
+        </div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center gap-space-xs text-on-surface mb-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary">folder_special</span>
+<h3 class="font-headline-md text-headline-md">Extensão Automática</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Inclusão direta de novas subsidiárias criadas durante a vigência, desde que ativos representem menos de 25% do consolidado.
+        </p>
+<div class="mt-space-md pt-space-xs font-data-mono-sm text-data-mono-sm text-secondary font-semibold">
+          M&amp;A Coverage Protegida
+        </div>
+</div>
+</div>
+<!-- Discretionary Audit Footnote -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low/70">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Dados consolidados via inferência documental <strong>D&amp;O Intel Engine</strong>. Para auditoria e confirmação da fonte primária, acesse a aba <a class="text-secondary font-semibold hover:underline" href="#">Evidências</a>.
+        </p>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant shrink-0">Engine v4.8 • Confiança 99.4%</span>
+</div>
+</div>
+</div></main></div></body></html>

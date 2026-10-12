@@ -1,0 +1,43 @@
+# Plan de Implementação — Autenticação JWT & RBAC
+
+Implementar a camada completa de Autenticação JWT, gestão de senhas com `passlib`/`hashlib`, e endpoints de autorização no backend FastAPI.
+
+## User Review Required
+
+> [!IMPORTANT]
+> A implementação adicionará os endpoints `/v1/auth/login`, `/v1/auth/register`, `/v1/auth/me` e `/v1/auth/refresh`. As senhas serão armazenadas com *hash* PBKDF2/SHA256 ou bcrypt.
+
+## Proposed Changes
+
+### Core Security & Authentication
+
+#### [NEW] [security.py](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/backend/app/core/security.py)
+- Funções para hash e verificação de senhas (`hash_password`, `verify_password`).
+- Funções de criação e validação de tokens JWT (`create_access_token`, `create_refresh_token`, `decode_token`).
+- FastAPI `OAuth2PasswordBearer` scheme e dependências `get_current_user` e `require_role`.
+
+#### [NEW] [auth.py](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/backend/app/api/auth.py)
+- Endpoint `POST /v1/auth/login`: Autentica utilizador e devolve `access_token` JWT.
+- Endpoint `POST /v1/auth/register`: Cria novos utilizadores com perfil padrão.
+- Endpoint `GET /v1/auth/me`: Retorna os dados do utilizador autenticado e as suas permissões.
+- Endpoint `POST /v1/auth/refresh`: Renova tokens de acesso expirados.
+
+#### [MODIFY] [endpoints.py](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/backend/app/api/endpoints.py)
+- Incluir o novo `auth.router` nos roteadores do FastAPI.
+
+#### [NEW] [seed_auth.py](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/do-intelligence/backend/seed_auth.py)
+- Script para criar perfis padrão (`admin`, `underwriter`, `user`) e o utilizador administrador inicial (`admin@dointelligence.com`).
+
+---
+
+## Verification Plan
+
+### Automated Tests
+- Executar um script de teste `test_auth_jwt.py` em `backend/` que valida:
+  1. Criação do utilizador via `/v1/auth/register` ou seed.
+  2. Autenticação e obtenção do `access_token` JWT via `/v1/auth/login`.
+  3. Consulta dos dados do utilizador via `/v1/auth/me` enviando o `Bearer <token>`.
+  4. Validação de rejeição (HTTP 401) com tokens inválidos ou expirados.
+
+### Manual Verification
+- Testar o fluxo de login e validação de token via Swagger UI (`http://localhost:8000/docs`).

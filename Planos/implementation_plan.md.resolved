@@ -1,0 +1,60 @@
+# Implementation Plan - D&O Intelligence MVP
+
+Building the D&O Intelligence platform for intelligent analysis, clause extraction, trace-backed evidence, and comparison of Directors & Officers (D&O) insurance policies.
+
+## User Review Required
+
+> [!IMPORTANT]
+> The backend uses SQLite (`insurance_policie_analysis.db`) as configured in [secrets.txt](file:///d:/Projectos/I2A2/Labs/DO%20Insight%20%E2%80%94%20Intelligent%20Policy%20Analysis/secrets.txt) and uses OpenRouter API with `google/gemini-2.5-flash` for agent processing, with fallbacks to deterministic mock providers when offline/testing.
+
+> [!NOTE]
+> Traceability (Document -> Page -> Text Chunk Evidence) is built into every extracted field, clause, and comparison insight.
+
+## Proposed Changes
+
+### Backend Infrastructure & Data Models
+- Implement `requirements.txt` with FastAPI, SQLAlchemy, Pydantic v2, PyMuPDF, LangGraph, ChromaDB, etc.
+- Implement database models (`Document`, `Policy`, `PolicyField`, `Clause`, `Comparison`, `ComparisonItem`, `User`, `AuditLog`, `Setting`, `Checkpoint`).
+- Implement database initialization & migration helpers.
+
+### Document & RAG Engine (`backend/app/rag/` & `backend/app/services/`)
+- Implement `OCRProvider` (`TesseractOCRProvider`, `MockOCRProvider`).
+- Implement PDF text extractor (`PyMuPDF` with fallback to OCR) keeping exact page metadata.
+- Implement chunking and `VectorStore` (ChromaDB + in-memory vector search fallback).
+
+### LangGraph Agentic Pipeline (`backend/app/agents/`)
+- `DocumentAgent`: Document ingestion, page extraction, chunking.
+- `PolicyExtractionAgent`: Pydantic structured output extraction for D&O metadata, limits, deductibles, retroactivity.
+- `ClauseIntelligenceAgent`: Multi-label clause classification (Coverages, Exclusions, Conditions, Sublimits, etc.).
+- `PolicyComparisonAgent`: Deterministic + LLM qualitative comparison matrix.
+- `RiskInsightAgent`: Risk scoring and actionable insights tied to source evidence.
+- `ReportAgent`: Consolidated executive report builder.
+- `OrchestratorAgent`: LangGraph state machine workflow coordinator.
+
+### REST API Layer (`backend/app/api/`)
+- `documents.py`: Upload, list, process, status endpoints.
+- `policies.py`: Policy details, extracted fields, clauses, evidence tags.
+- `comparisons.py`: Compare 2 policies, retrieve comparison matrix.
+- `reports.py`: Generate HTML / JSON executive reports.
+- `settings.py` & `logs.py`: System diagnostic logs and agent model settings.
+
+### Frontend B2B Dashboard (`do-intelligence/frontend/`)
+- Create React + Vite + TypeScript application with MUI theme.
+- Navigation Sidebar & Topbar corresponding to application routes:
+  - **Dashboard**: System overview, recent analyses, metrics.
+  - **Apólices**: Full library of processed D&O policies and details.
+  - **Nova Análise**: Drag-and-drop PDF upload & live processing pipeline.
+  - **Comparações**: Side-by-side policy benchmark & difference highlights.
+  - **Auditoria de Evidência**: Split-screen PDF / page text viewer with highlighted evidence.
+  - **Relatórios**: Executive report view with printable design.
+  - **Logs & Configurações**: Observability, audit trails, and agent settings.
+
+## Verification Plan
+
+### Automated Tests
+- Run `pytest` on backend models, agents, OCR providers, and API endpoints.
+
+### Manual Verification
+- Test PDF document upload and text extraction.
+- Validate LangGraph orchestrator flow from ingestion to report generation.
+- Check frontend rendering, navigation, split-screen evidence audit, and report generation in browser.
